@@ -8,7 +8,7 @@ public class FalHozzaad {
     public static void falHozzaad(char fal){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Add meg a pozíciót (pl. 'c3'): ");
+        System.out.print("Add meg a pozíciót egyben (1. abc betui 2. egész szám): ");
         String position = scanner.nextLine().toUpperCase();
         if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {
             System.out.println("Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.");
@@ -26,7 +26,7 @@ public class FalHozzaad {
         if (Palya.palya[y][x] == ' ') {
             Palya.palya[y][x] = fal;
         } else {
-            System.out.println("A megadott pozíció már foglalt.");
+            System.out.println("A megadott pozíció már foglalt.Válassz másik pozíciót");
         }
     }
 }

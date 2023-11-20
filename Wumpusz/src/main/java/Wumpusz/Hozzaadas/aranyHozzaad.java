@@ -7,11 +7,11 @@ import java.util.Scanner;
 import static Wumpusz.Szerkesztes.Palya.palya;
 
 public class aranyHozzaad {
-        public static int aranySzamlalo = 1;
+    public static int aranySzamlalo = 1;
         public static void aranyHozzadas() {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Add meg az arany pozícióját (pl. 'c3'): ");
+            System.out.print("Add meg az arany pozícióját egyben (1. abc betui 2. egész szám) ");
             String position = scanner.nextLine().toUpperCase();
             if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {
                 System.out.println("Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.");
@@ -31,7 +31,7 @@ public class aranyHozzaad {
                 aranySzamlalo--;
                 System.out.println("Arany hozzáadva");
             } else {
-                System.out.println("A megadott pozíció már foglalt, vagy nem helyezhető oda az arany");
+                System.out.println("A megadott pozíció már foglalt, vagy nem helyezhető oda az arany. Válassz másik pozíciót!");
             }
         }
     }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Palyaszerkeszto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Wumpusz</a> &gt; <a href="index.source.html" class="el_package">Wumpusz.Szerkesztes</a> &gt; <span class="el_source">Palyaszerkeszto.java</span></div><h1>Palyaszerkeszto.java</h1><pre class="source lang-java linenums">package Wumpusz.Szerkesztes;
+
+import Wumpusz.Hozzaadas.*;
+
+import java.util.Scanner;
+
+import static Wumpusz.Szerkesztes.Palya.palyaKiiratas;
+
+<span class="nc" id="L9">public class Palyaszerkeszto {</span>
+    public static void palyaszerkeszto(){
+<span class="nc" id="L11">        Scanner scanner = new Scanner(System.in);</span>
+        try {
+<span class="nc" id="L13">            System.out.println(&quot;Add meg a pálya méretét (N):&quot;);</span>
+<span class="nc" id="L14">            Palya.N=Integer.parseInt(scanner.next());</span>
+<span class="nc bnc" id="L15" title="All 4 branches missed.">            if (Palya.N&lt;6 || Palya.N&gt;20){</span>
+<span class="nc" id="L16">                System.out.println(&quot;A pálya mérete túl kicsi/nagy. 6 és 20 közötti számot adj meg!&quot;);</span>
+<span class="nc" id="L17">                return;</span>
+            }
+<span class="nc" id="L19">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L20">            System.out.println(&quot;Nem helyes érték van megadva&quot;);</span>
+<span class="nc" id="L21">            return;</span>
+<span class="nc" id="L22">        }</span>
+<span class="nc" id="L23">        Palya.palyaInicializalasa();</span>
+<span class="nc" id="L24">        palyaKiiratas();</span>
+
+<span class="nc" id="L26">        boolean szerkesztesBefejezes = true;</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        while(szerkesztesBefejezes){</span>
+<span class="nc" id="L28">            System.out.println(&quot;&quot;&quot;</span>
+                    Szerkesztési lehetőségek:
+                    
+                    1. Fal hozzáadása
+                    2. Verem hozzáadása
+                    3. Wumpusz hozzáadása (&quot;&quot;&quot;+ wumpuszHozzaad.wumpuszSzamlalo+&quot;&quot;&quot;
+                    )
+                    4. Arany hozzáadás (&quot;&quot;&quot;+ aranyHozzaad.aranySzamlalo+&quot;&quot;&quot;
+                    )
+                    5. Hős hozzáadása (&quot;&quot;&quot;+ hosHozzaad.hosSzamlalo+&quot;&quot;&quot;
+                    )
+                    6. Szerkesztés befejezés
+                    &quot;&quot;&quot;);
+
+<span class="nc" id="L42">            int valasztas = scanner.nextInt();</span>
+<span class="nc bnc" id="L43" title="All 7 branches missed.">            switch (valasztas){</span>
+                case 1:
+<span class="nc" id="L45">                    FalHozzaad.falHozzaad('F');</span>
+<span class="nc" id="L46">                    break;</span>
+                case 2:
+<span class="nc" id="L48">                    VeremHozzaad.veremHozzaad('V');</span>
+<span class="nc" id="L49">                    break;</span>
+                case 3:
+<span class="nc bnc" id="L51" title="All 2 branches missed.">                    if (wumpuszHozzaad.wumpuszSzamlalo&gt;0){</span>
+<span class="nc" id="L52">                        wumpuszHozzaad.wumpuszHozzaad();</span>
+                    }
+                    else {
+<span class="nc" id="L55">                        System.out.println(&quot;Nem tudsz több Wumpusz-t hozzáadni&quot;);</span>
+                    }
+<span class="nc" id="L57">                    break;</span>
+                case 4:
+<span class="nc bnc" id="L59" title="All 2 branches missed.">                    if (aranyHozzaad.aranySzamlalo&gt;0){</span>
+<span class="nc" id="L60">                        aranyHozzaad.aranyHozzadas();</span>
+                    }
+                    else {
+<span class="nc" id="L63">                        System.out.println(&quot;Nem tudsz több Arany-at hozzáadni&quot;);</span>
+                    }
+<span class="nc" id="L65">                    break;</span>
+                case 5:
+<span class="nc bnc" id="L67" title="All 2 branches missed.">                    if (hosHozzaad.hosSzamlalo&gt;0){</span>
+<span class="nc" id="L68">                        hosHozzaad.hosHozzadas();</span>
+                    }
+                    else {
+<span class="nc" id="L71">                        System.out.println(&quot;Nem tudsz több Hős-t hozzáadni&quot;);</span>
+                    }
+<span class="nc" id="L73">                    break;</span>
+                case 6:
+<span class="nc" id="L75">                    System.out.println(&quot;Szerkesztés befejezve!&quot;);</span>
+<span class="nc" id="L76">                    szerkesztesBefejezes = false;</span>
+<span class="nc" id="L77">                    break;</span>
+                default:
+<span class="nc" id="L79">                    System.out.println(&quot;Adj meg 1 és 6 közötti értéket! Hibás értéket adtál meg.&quot;);</span>
+                    break;
+            }
+<span class="nc" id="L82">            palyaKiiratas();</span>
+<span class="nc" id="L83">        }</span>
+<span class="nc" id="L84">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -13,7 +13,7 @@ public class wumpuszHozzaad {
         public static void wumpuszHozzaad() {
 
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Add meg a WUMPUSZ kezdő pozícióját (pl. 'c3'): ");
+            System.out.print("Add meg a WUMPUSZ kezdő pozíciójátegyben (1. abc betui 2. egész szám): ");
             String position = scanner.nextLine().toUpperCase();
             if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {
                 System.out.println("Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.");
@@ -33,7 +33,7 @@ public class wumpuszHozzaad {
                 wumpuszSzamlalo--;
                 System.out.println("Wumpusz hozzáadva");
             } else {
-                System.out.println("A megadott pozíció már foglalt, vagy nem helyezhető oda wumpusz");
+                System.out.println("A megadott pozíció már foglalt, vagy nem helyezhető oda wumpusz.Válassz másik pozíciót");
             }
         }
 }

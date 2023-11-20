@@ -14,7 +14,7 @@ public class hosHozzaad {
     public static void hosHozzadas() {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Add meg az arany pozícióját (pl. 'c3'): ");
+            System.out.print("Add meg az arany pozícióját egyben (1. abc betui 2. egész szám): ");
             String position = scanner.nextLine().toUpperCase();
             if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {
                 System.out.println("Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.");
@@ -34,7 +34,7 @@ public class hosHozzaad {
                 hosSzamlalo--;
                 System.out.println("HŐS hozzáadva!");
             } else {
-                System.out.println("A megadott pozíció már foglalt.");
+                System.out.println("A megadott pozíció már foglalt.Válassz másik pozíciót");
             }
         }
     public int getHosPozX() {

@@ -13,6 +13,7 @@ public class AlapMenu {
         String felhasznalonev = scanner.nextLine();
         System.out.println("Üdvözöllek "+felhasznalonev);
 
+
         while (!kilep){
         System.out.println("""
                 Alap menü:
@@ -24,26 +25,31 @@ public class AlapMenu {
                 """);
 
             int valasz = scanner.nextInt();
-            switch (valasz){
-                case 1:
+            switch (valasz) {
+                case 1 -> {
                     System.out.println("Pályaszerkesztés elkezdődött");
                     Palyaszerkeszto.palyaszerkeszto();
-                    break;
-                case 2:
-                    System.out.println("mentés");
-                    break;
-                case 3:
-                    System.out.println("betöltés");
-                    break;
-                case 4:
+                }
+                case 2 -> System.out.println("mentés");
+                case 3 -> System.out.println("betöltés");
+                case 4 -> {
                     System.out.println("Játék indítás!");
                     Jatek jatek = new Jatek();
                     jatek.inditas();
-                    break;
-                case 5:
-                    kilep=true;
+                }
+                case 5 -> {
+                    kilep = true;
                     System.out.println("Kiléptél a kjátékból!");
+                }
             }
         }
     }
+    public void setPalyaszerkeszto(Palyaszerkeszto mockPalyaszerkeszto) {
+        return;
+    }
+
+    public void setJatek(Jatek mockJatek) {
+    }
+
+
 }

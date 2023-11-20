@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>hosHozzaad.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Wumpusz</a> &gt; <a href="index.source.html" class="el_package">Wumpusz.Hozzaadas</a> &gt; <span class="el_source">hosHozzaad.java</span></div><h1>hosHozzaad.java</h1><pre class="source lang-java linenums">package Wumpusz.Hozzaadas;
+
+import Wumpusz.Szerkesztes.Palya;
+
+import java.util.Scanner;
+
+import static Wumpusz.Szerkesztes.Palya.palya;
+
+<span class="nc" id="L9">public class hosHozzaad {</span>
+<span class="nc" id="L10">        public static int hosSzamlalo = 1;</span>
+        static int hosPozX;
+        static int hosPozY;
+
+    public static void hosHozzadas() {
+<span class="nc" id="L15">            Scanner scanner = new Scanner(System.in);</span>
+
+<span class="nc" id="L17">            System.out.print(&quot;Add meg az arany pozícióját (pl. 'c3'): &quot;);</span>
+<span class="nc" id="L18">            String position = scanner.nextLine().toUpperCase();</span>
+<span class="nc bnc" id="L19" title="All 6 branches missed.">            if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {</span>
+<span class="nc" id="L20">                System.out.println(&quot;Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.&quot;);</span>
+<span class="nc" id="L21">                return;</span>
+            }
+
+<span class="nc" id="L24">            hosPozX = position.charAt(0) - 'A' + 1;</span>
+<span class="nc" id="L25">            hosPozY = Character.getNumericValue(position.charAt(1));</span>
+
+<span class="nc bnc" id="L27" title="All 8 branches missed.">            if (hosPozX &lt; 1 || hosPozX &gt;= Palya.N - 1 || hosPozY &lt; 1 || hosPozY &gt;= Palya.N - 1) {</span>
+<span class="nc" id="L28">                System.out.println(&quot;Az Arany nem helyezhető a szélekhez közel.&quot;);</span>
+<span class="nc" id="L29">                return;</span>
+            }
+
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            if (palya[hosPozY][hosPozX] == ' ') {</span>
+<span class="nc" id="L33">                palya[hosPozY][hosPozX] = 'H';</span>
+<span class="nc" id="L34">                hosSzamlalo--;</span>
+<span class="nc" id="L35">                System.out.println(&quot;HŐS hozzáadva!&quot;);</span>
+            } else {
+<span class="nc" id="L37">                System.out.println(&quot;A megadott pozíció már foglalt.&quot;);</span>
+            }
+<span class="nc" id="L39">        }</span>
+    public int getHosPozX() {
+<span class="nc" id="L41">        return hosPozX;</span>
+    }
+
+    public int getHosPozY() {
+<span class="nc" id="L45">        return hosPozY;</span>
+    }
+    }
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
