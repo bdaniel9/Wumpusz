@@ -7,12 +7,12 @@ public class Palya {
     public static void palyaInicializalasa() {
         palya = new char[N + 1][N + 1];
 
-        // Az első oszlop feltöltése abc betűivel, egy sorral lejjebb
+       //0. oszlop feltöltése betűkkel
         for (int j = 1; j < N; j++) {
             palya[j][0] = (char) ('0' + j);
         }
 
-        // A nulladik sor feltöltése számokkal
+        //0. sor feltöltése számokkal
         for (int i = 1; i < N; i++) {
             palya[0][i] = (char)('a' + i - 1);
         }
