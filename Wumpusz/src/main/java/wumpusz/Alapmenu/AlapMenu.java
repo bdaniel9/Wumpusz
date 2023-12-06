@@ -29,19 +29,26 @@ public class AlapMenu {
                 case 1: {
                     System.out.println("Pályaszerkesztés elkezdődött");
                     Palyaszerkeszto.palyaszerkeszto();
+                    break;
                 }
-                case 2 : System.out.println("Adatbázisból betöltés");
+                case 2 : {
+                    System.out.println("Adatbázisból betöltés");
+                    break;
+                }
                 case 3 : {
                     System.out.println("Adatbázisba mentés...");
+                    break;
                 }
                 case 4 : {
                     System.out.println("Játék indítás!");
                     Jatek jatek = new Jatek();
                     jatek.inditas();
+                    break;
                 }
                 case 5 : {
                     kilep = true;
                     System.out.println("Kiléptél a játékból!");
+                    break;
                 }
             }
         }

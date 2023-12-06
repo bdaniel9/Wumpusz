@@ -72,7 +72,7 @@ public class Jatek {
             if (parancs.equals("felad")) {
                 System.out.println("Feladtad a játékot. Összesen " + lepesMennyiseg + " lépést tettél meg.");
                 felad = true;
-                continue;
+                break;
             }
 
             if (parancs.equals("mozgas")) {

@@ -7,9 +7,9 @@ import java.util.Scanner;
 import static wumpusz.Szerkesztes.Palya.palya;
 
 public class HosHozzaad {
-        public static int hosSzamlalo = 1;
-    private int hosPozX;
-    private int hosPozY;
+    public static int hosSzamlalo = 1;
+    public static int hosPozX;
+    public static int hosPozY;
 
     public int getHosPozX() {
         return hosPozX;
@@ -19,7 +19,7 @@ public class HosHozzaad {
         return hosPozY;
     }
 
-    public void hosHozzadas() {
+    public static void hosHozzadas() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Add meg a HŐS pozícióját egyben (1. abc betui 2. egész szám): ");
