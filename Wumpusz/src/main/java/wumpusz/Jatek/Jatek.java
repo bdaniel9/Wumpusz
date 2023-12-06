@@ -106,7 +106,7 @@ public class Jatek {
                 if (palya[ujY][ujX] == 'W') {
                     System.out.println("Meghaltál, mert rá léptél egy Wumpuszra.");
                     felad = true;
-                    returnToMainMenu();
+                    AlapMenu.alapMenu();
                     continue;
                 }
 
@@ -119,7 +119,7 @@ public class Jatek {
                     } else {
                         System.out.println("Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!");
                         felad = true;
-                        returnToMainMenu();
+                        AlapMenu.alapMenu();
                     }
                     continue;
                 }
@@ -200,7 +200,7 @@ public class Jatek {
         if (palya[hosY][hosX] == 'W') {
             System.out.println("Meghaltál, mert rá léptél egy Wumpuszra.");
             felad = true;
-            returnToMainMenu();
+            AlapMenu.alapMenu();
         } else if (palya[hosY][hosX] == 'V') {
             if (nyilakSzama > 0) {
                 System.out.println("A nyílak számát csökkentették, mert beleléptél a verembe.");
@@ -208,17 +208,14 @@ public class Jatek {
             } else {
                 System.out.println("Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!");
                 felad = true;
-                returnToMainMenu();
+                AlapMenu.alapMenu();
             }
         } else if (palya[hosY][hosX] == 'A') {
             System.out.println("Gratulálunk, megszerezted az aranyat!");
             felad = true;
-            returnToMainMenu();
+            AlapMenu.alapMenu();
         }
     }
 
-    public void returnToMainMenu() {
-        AlapMenu.alapMenu();
-    }
 
 }
