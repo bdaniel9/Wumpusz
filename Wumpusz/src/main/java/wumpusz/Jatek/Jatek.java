@@ -14,13 +14,10 @@ public class Jatek {
     private int hosY;
     private int nyilakSzama;
     public static int lepesMennyiseg;
-    private String felhasznalonev;
 
-    public Jatek(String felhasznalonev) {
-        this.felhasznalonev = felhasznalonev;
-    }
 
     //------------- adatbazisba mentesnel kell!!!
+    /*
     public int getLepesMennyiseg() {
         return lepesMennyiseg;
     }
@@ -39,7 +36,8 @@ public class Jatek {
     public int getNyilakSzama() {
         return this.nyilakSzama;
     }
-    //-----------------
+
+     */
 
     public Jatek() {
         HosHozzaad hos = new HosHozzaad();
@@ -47,6 +45,7 @@ public class Jatek {
         hosY = hos.getHosPozY();
         nyilakSzama = WumpuszHozzaad.nyilakSzama;
     }
+
     public void palyaKiiratas() {
         for (int i = 0; i < Palya.N; i++) {
             for (int j = 0; j < Palya.N; j++) {
@@ -90,7 +89,7 @@ public class Jatek {
                     case "fel":
                         ujY--;
                         break;
-                    case "le" :
+                    case "le":
                         ujY++;
                         break;
                     default: {

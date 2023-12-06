@@ -36,7 +36,7 @@ public class AlapMenu {
                 }
                 case 4 : {
                     System.out.println("Játék indítás!");
-                    Jatek jatek = new Jatek(felhasznalonev);
+                    Jatek jatek = new Jatek();
                     jatek.inditas();
                 }
                 case 5 : {
