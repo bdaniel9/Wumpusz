@@ -46,12 +46,4 @@ public class AlapMenu {
             }
         }
     }
-    public void setPalyaszerkeszto(Palyaszerkeszto mockPalyaszerkeszto) {
-        return;
-    }
-
-    public void setJatek(Jatek mockJatek) {
-    }
-
-
 }
