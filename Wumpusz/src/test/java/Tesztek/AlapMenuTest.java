@@ -1,11 +1,10 @@
 package Tesztek;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-import Wumpusz.Alapmenu.AlapMenu;
-import Wumpusz.Jatek.Jatek;
-import Wumpusz.Szerkesztes.Palyaszerkeszto;
+import wumpusz.Alapmenu.AlapMenu;
+import wumpusz.Jatek.Jatek;
+import wumpusz.Szerkesztes.Palyaszerkeszto;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;

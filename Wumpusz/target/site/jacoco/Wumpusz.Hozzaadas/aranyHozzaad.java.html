@@ -11,7 +11,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
         public static void aranyHozzadas() {
 <span class="nc" id="L12">            Scanner scanner = new Scanner(System.in);</span>
 
-<span class="nc" id="L14">            System.out.print(&quot;Add meg az arany pozícióját (pl. 'c3'): &quot;);</span>
+<span class="nc" id="L14">            System.out.print(&quot;Add meg az arany pozícióját egyben (1. abc betui 2. egész szám) &quot;);</span>
 <span class="nc" id="L15">            String position = scanner.nextLine().toUpperCase();</span>
 <span class="nc bnc" id="L16" title="All 6 branches missed.">            if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {</span>
 <span class="nc" id="L17">                System.out.println(&quot;Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.&quot;);</span>
@@ -31,7 +31,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
 <span class="nc" id="L31">                aranySzamlalo--;</span>
 <span class="nc" id="L32">                System.out.println(&quot;Arany hozzáadva&quot;);</span>
             } else {
-<span class="nc" id="L34">                System.out.println(&quot;A megadott pozíció már foglalt, vagy nem helyezhető oda az arany&quot;);</span>
+<span class="nc" id="L34">                System.out.println(&quot;A megadott pozíció már foglalt, vagy nem helyezhető oda az arany. Válassz másik pozíciót!&quot;);</span>
             }
 <span class="nc" id="L36">        }</span>
     }

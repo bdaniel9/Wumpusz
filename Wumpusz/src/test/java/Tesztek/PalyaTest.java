@@ -1,7 +1,6 @@
 package Tesztek;
 
-import Wumpusz.Szerkesztes.Palya;
-import org.junit.Assert;
+import wumpusz.Szerkesztes.Palya;
 import org.junit.Test;
 
 public class PalyaTest {

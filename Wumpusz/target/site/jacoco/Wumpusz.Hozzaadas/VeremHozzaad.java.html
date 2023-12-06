@@ -8,7 +8,7 @@ import java.util.Scanner;
     public static void veremHozzaad(char verem){
 <span class="nc" id="L9">        Scanner scanner = new Scanner(System.in);</span>
 
-<span class="nc" id="L11">        System.out.print(&quot;Add meg a pozíciót (pl. 'c3'): &quot;);</span>
+<span class="nc" id="L11">        System.out.print(&quot;Add meg a pozíciót egyben (1. abc betui 2. egész szám):&quot;);</span>
 <span class="nc" id="L12">        String position = scanner.nextLine().toUpperCase();</span>
 <span class="nc bnc" id="L13" title="All 6 branches missed.">        if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {</span>
 <span class="nc" id="L14">            System.out.println(&quot;Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.&quot;);</span>
@@ -26,7 +26,7 @@ import java.util.Scanner;
 <span class="nc bnc" id="L26" title="All 2 branches missed.">        if (Palya.palya[y][x] == ' ') {</span>
 <span class="nc" id="L27">            Palya.palya[y][x] = verem;</span>
         } else {
-<span class="nc" id="L29">            System.out.println(&quot;A megadott pozíció már foglalt.&quot;);</span>
+<span class="nc" id="L29">            System.out.println(&quot;A megadott pozíció már foglalt.Válassz másik pozíciót&quot;);</span>
         }
 <span class="nc" id="L31">    }</span>
 }

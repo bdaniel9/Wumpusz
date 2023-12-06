@@ -24,63 +24,59 @@ import static Wumpusz.Szerkesztes.Palya.palyaKiiratas;
 <span class="nc" id="L24">        palyaKiiratas();</span>
 
 <span class="nc" id="L26">        boolean szerkesztesBefejezes = true;</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        while(szerkesztesBefejezes){</span>
-<span class="nc" id="L28">            System.out.println(&quot;&quot;&quot;</span>
-                    Szerkesztési lehetőségek:
-                    
-                    1. Fal hozzáadása
-                    2. Verem hozzáadása
-                    3. Wumpusz hozzáadása (&quot;&quot;&quot;+ wumpuszHozzaad.wumpuszSzamlalo+&quot;&quot;&quot;
-                    )
-                    4. Arany hozzáadás (&quot;&quot;&quot;+ aranyHozzaad.aranySzamlalo+&quot;&quot;&quot;
-                    )
-                    5. Hős hozzáadása (&quot;&quot;&quot;+ hosHozzaad.hosSzamlalo+&quot;&quot;&quot;
-                    )
-                    6. Szerkesztés befejezés
-                    &quot;&quot;&quot;);
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        while (szerkesztesBefejezes) {</span>
+<span class="nc" id="L28">            System.out.println(</span>
+                    &quot;Szerkesztési lehetőségek:\n\n&quot; +
+                            &quot;1. Fal hozzáadása\n&quot; +
+                            &quot;2. Verem hozzáadása\n&quot; +
+                            &quot;3. Wumpusz hozzáadása (&quot; + wumpuszHozzaad.wumpuszSzamlalo + &quot;)\n&quot; +
+                            &quot;4. Arany hozzáadás (&quot; + aranyHozzaad.aranySzamlalo + &quot;)\n&quot; +
+                            &quot;5. Hős hozzáadása (&quot; + hosHozzaad.hosSzamlalo + &quot;)\n&quot; +
+                            &quot;6. Szerkesztés befejezés\n&quot;
+            );
 
-<span class="nc" id="L42">            int valasztas = scanner.nextInt();</span>
-<span class="nc bnc" id="L43" title="All 7 branches missed.">            switch (valasztas){</span>
+<span class="nc" id="L38">            int valasztas = scanner.nextInt();</span>
+<span class="nc bnc" id="L39" title="All 7 branches missed.">            switch (valasztas){</span>
                 case 1:
-<span class="nc" id="L45">                    FalHozzaad.falHozzaad('F');</span>
-<span class="nc" id="L46">                    break;</span>
+<span class="nc" id="L41">                    FalHozzaad.falHozzaad('F');</span>
+<span class="nc" id="L42">                    break;</span>
                 case 2:
-<span class="nc" id="L48">                    VeremHozzaad.veremHozzaad('V');</span>
-<span class="nc" id="L49">                    break;</span>
+<span class="nc" id="L44">                    VeremHozzaad.veremHozzaad('V');</span>
+<span class="nc" id="L45">                    break;</span>
                 case 3:
-<span class="nc bnc" id="L51" title="All 2 branches missed.">                    if (wumpuszHozzaad.wumpuszSzamlalo&gt;0){</span>
-<span class="nc" id="L52">                        wumpuszHozzaad.wumpuszHozzaad();</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">                    if (wumpuszHozzaad.wumpuszSzamlalo&gt;0){</span>
+<span class="nc" id="L48">                        wumpuszHozzaad.wumpuszHozzaad();</span>
                     }
                     else {
-<span class="nc" id="L55">                        System.out.println(&quot;Nem tudsz több Wumpusz-t hozzáadni&quot;);</span>
+<span class="nc" id="L51">                        System.out.println(&quot;Nem tudsz több Wumpusz-t hozzáadni&quot;);</span>
                     }
-<span class="nc" id="L57">                    break;</span>
+<span class="nc" id="L53">                    break;</span>
                 case 4:
-<span class="nc bnc" id="L59" title="All 2 branches missed.">                    if (aranyHozzaad.aranySzamlalo&gt;0){</span>
-<span class="nc" id="L60">                        aranyHozzaad.aranyHozzadas();</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                    if (aranyHozzaad.aranySzamlalo&gt;0){</span>
+<span class="nc" id="L56">                        aranyHozzaad.aranyHozzadas();</span>
                     }
                     else {
-<span class="nc" id="L63">                        System.out.println(&quot;Nem tudsz több Arany-at hozzáadni&quot;);</span>
+<span class="nc" id="L59">                        System.out.println(&quot;Nem tudsz több Arany-at hozzáadni&quot;);</span>
                     }
-<span class="nc" id="L65">                    break;</span>
+<span class="nc" id="L61">                    break;</span>
                 case 5:
-<span class="nc bnc" id="L67" title="All 2 branches missed.">                    if (hosHozzaad.hosSzamlalo&gt;0){</span>
-<span class="nc" id="L68">                        hosHozzaad.hosHozzadas();</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">                    if (hosHozzaad.hosSzamlalo&gt;0){</span>
+<span class="nc" id="L64">                        hosHozzaad.hosHozzadas();</span>
                     }
                     else {
-<span class="nc" id="L71">                        System.out.println(&quot;Nem tudsz több Hős-t hozzáadni&quot;);</span>
+<span class="nc" id="L67">                        System.out.println(&quot;Nem tudsz több Hős-t hozzáadni&quot;);</span>
                     }
-<span class="nc" id="L73">                    break;</span>
+<span class="nc" id="L69">                    break;</span>
                 case 6:
-<span class="nc" id="L75">                    System.out.println(&quot;Szerkesztés befejezve!&quot;);</span>
-<span class="nc" id="L76">                    szerkesztesBefejezes = false;</span>
-<span class="nc" id="L77">                    break;</span>
+<span class="nc" id="L71">                    System.out.println(&quot;Szerkesztés befejezve!&quot;);</span>
+<span class="nc" id="L72">                    szerkesztesBefejezes = false;</span>
+<span class="nc" id="L73">                    break;</span>
                 default:
-<span class="nc" id="L79">                    System.out.println(&quot;Adj meg 1 és 6 közötti értéket! Hibás értéket adtál meg.&quot;);</span>
+<span class="nc" id="L75">                    System.out.println(&quot;Adj meg 1 és 6 közötti értéket! Hibás értéket adtál meg.&quot;);</span>
                     break;
             }
-<span class="nc" id="L82">            palyaKiiratas();</span>
-<span class="nc" id="L83">        }</span>
-<span class="nc" id="L84">    }</span>
+<span class="nc" id="L78">            palyaKiiratas();</span>
+<span class="nc" id="L79">        }</span>
+<span class="nc" id="L80">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

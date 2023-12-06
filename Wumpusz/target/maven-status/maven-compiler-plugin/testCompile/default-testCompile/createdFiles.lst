@@ -1,8 +1,9 @@
-WumpuszHozzaadTest.class
-AlapMenuTest.class
-HosHozzaadTest.class
-AranyHozzaadTest.class
-JatekTest.class
-PalyaTest.class
-VeremHozzaadTest.class
-FalHozzaadTest.class
+Tesztek\PalyaTest.class
+Tesztek\FalHozzaadTest.class
+Tesztek\JatekTest.class
+Tesztek\HosHozzaadTest.class
+Tesztek\VeremHozzaadTest.class
+Tesztek\AranyHozzaadTest.class
+Tesztek\AlapMenuTest.class
+Tesztek\MainTest.class
+Tesztek\WumpuszHozzaadTest.class

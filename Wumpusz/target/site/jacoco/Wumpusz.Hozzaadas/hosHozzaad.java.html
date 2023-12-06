@@ -14,7 +14,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
     public static void hosHozzadas() {
 <span class="nc" id="L15">            Scanner scanner = new Scanner(System.in);</span>
 
-<span class="nc" id="L17">            System.out.print(&quot;Add meg az arany pozícióját (pl. 'c3'): &quot;);</span>
+<span class="nc" id="L17">            System.out.print(&quot;Add meg az arany pozícióját egyben (1. abc betui 2. egész szám): &quot;);</span>
 <span class="nc" id="L18">            String position = scanner.nextLine().toUpperCase();</span>
 <span class="nc bnc" id="L19" title="All 6 branches missed.">            if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {</span>
 <span class="nc" id="L20">                System.out.println(&quot;Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.&quot;);</span>
@@ -34,7 +34,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
 <span class="nc" id="L34">                hosSzamlalo--;</span>
 <span class="nc" id="L35">                System.out.println(&quot;HŐS hozzáadva!&quot;);</span>
             } else {
-<span class="nc" id="L37">                System.out.println(&quot;A megadott pozíció már foglalt.&quot;);</span>
+<span class="nc" id="L37">                System.out.println(&quot;A megadott pozíció már foglalt.Válassz másik pozíciót&quot;);</span>
             }
 <span class="nc" id="L39">        }</span>
     public int getHosPozX() {

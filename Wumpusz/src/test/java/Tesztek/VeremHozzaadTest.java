@@ -1,7 +1,7 @@
 package Tesztek;
 
-import Wumpusz.Hozzaadas.VeremHozzaad;
-import Wumpusz.Szerkesztes.Palya;
+import wumpusz.Hozzaadas.VeremHozzaad;
+import wumpusz.Szerkesztes.Palya;
 import org.junit.Before;
 import org.junit.Test;
 

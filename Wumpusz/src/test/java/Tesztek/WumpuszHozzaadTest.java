@@ -1,13 +1,14 @@
 package Tesztek;
 
-import Wumpusz.Hozzaadas.wumpuszHozzaad;
-import Wumpusz.Szerkesztes.Palya;
+import wumpusz.Hozzaadas.WumpuszHozzaad;
+import wumpusz.Szerkesztes.Palya;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
+import static wumpusz.Szerkesztes.Palya.palya;
 import static org.junit.Assert.assertEquals;
 
 public class WumpuszHozzaadTest {
@@ -23,8 +24,8 @@ public class WumpuszHozzaadTest {
         String input = "c3\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        wumpuszHozzaad.wumpuszHozzaad();
-        assertEquals('W', Palya.palya[3][3]);
+        WumpuszHozzaad.wumpuszHozzaad();
+        assertEquals('W', palya[3][3]);
     }
 
     @Test
@@ -32,7 +33,7 @@ public class WumpuszHozzaadTest {
         String input = "invalid\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        wumpuszHozzaad.wumpuszHozzaad();
-        assertEquals(' ', Palya.palya[3][3]);
+        WumpuszHozzaad.wumpuszHozzaad();
+        assertEquals(' ', palya[3][3]);
     }
 }

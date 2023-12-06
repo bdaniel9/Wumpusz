@@ -1,7 +1,7 @@
 package Tesztek;
 
-import Wumpusz.Hozzaadas.aranyHozzaad;
-import Wumpusz.Szerkesztes.Palya;
+import wumpusz.Hozzaadas.AranyHozzaad;
+import wumpusz.Szerkesztes.Palya;
 import org.junit.Before;
 import org.junit.Test;
 import java.io.ByteArrayInputStream;
@@ -21,7 +21,7 @@ public class AranyHozzaadTest {
         String input = "c3\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        aranyHozzaad.aranyHozzadas();
+        AranyHozzaad.aranyHozzadas();
         assertEquals('A', Palya.palya[3][3]);
     }
 
@@ -30,7 +30,7 @@ public class AranyHozzaadTest {
         String input = "invalid\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        aranyHozzaad.aranyHozzadas();
+        AranyHozzaad.aranyHozzadas();
         assertEquals(' ', Palya.palya[3][3]);
     }
 }

@@ -14,170 +14,213 @@ public class Jatek {
     private int hosY;
     private int nyilakSzama;
     public static int lepesMennyiseg;
+    private String felhasznalonev;
 
-<span class="nc" id="L18">    public Jatek() {</span>
-<span class="nc" id="L19">        hosHozzaad hos = new hosHozzaad();</span>
-<span class="nc" id="L20">        hosX = hos.getHosPozX();</span>
-<span class="nc" id="L21">        hosY = hos.getHosPozY();</span>
-<span class="nc" id="L22">        nyilakSzama = wumpuszHozzaad.nyilakSzama;</span>
-<span class="nc" id="L23">    }</span>
+<span class="nc" id="L19">    public Jatek(String felhasznalonev) {</span>
+<span class="nc" id="L20">        this.felhasznalonev = felhasznalonev;</span>
+<span class="nc" id="L21">    }</span>
 
+    //------------- adatbazisba mentesnel kell!!!
+    public int getLepesMennyiseg() {
+<span class="nc" id="L25">        return lepesMennyiseg;</span>
+    }
+    public int getHosX() {
+<span class="nc" id="L28">        return this.hosX;</span>
+    }
+
+    public int getHosY() {
+<span class="nc" id="L32">        return hosY;</span>
+    }
+
+    public String getIrany() {
+<span class="nc" id="L36">        return this.irany;</span>
+    }
+
+    public int getNyilakSzama() {
+<span class="nc" id="L40">        return this.nyilakSzama;</span>
+    }
+    //-----------------
+
+<span class="nc" id="L44">    public Jatek() {</span>
+<span class="nc" id="L45">        hosHozzaad hos = new hosHozzaad();</span>
+<span class="nc" id="L46">        hosX = hos.getHosPozX();</span>
+<span class="nc" id="L47">        hosY = hos.getHosPozY();</span>
+<span class="nc" id="L48">        nyilakSzama = wumpuszHozzaad.nyilakSzama;</span>
+<span class="nc" id="L49">    }</span>
     public void palyaKiiratas() {
-<span class="nc bnc" id="L26" title="All 2 branches missed.">        for (int i = 0; i &lt; Palya.N; i++) {</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">            for (int j = 0; j &lt; Palya.N; j++) {</span>
-<span class="nc bnc" id="L28" title="All 4 branches missed.">                if (i == hosY &amp;&amp; j == hosX) {</span>
-<span class="nc" id="L29">                    System.out.print(&quot;H &quot;); // Hős pozíciója</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (int i = 0; i &lt; Palya.N; i++) {</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            for (int j = 0; j &lt; Palya.N; j++) {</span>
+<span class="nc bnc" id="L53" title="All 4 branches missed.">                if (i == hosY &amp;&amp; j == hosX) {</span>
+<span class="nc" id="L54">                    System.out.print(&quot;H &quot;); // Hős pozíciója</span>
                 } else {
-<span class="nc" id="L31">                    System.out.print(palya[i][j] + &quot; &quot;);</span>
+<span class="nc" id="L56">                    System.out.print(palya[i][j] + &quot; &quot;);</span>
                 }
             }
-<span class="nc" id="L34">            System.out.println();</span>
+<span class="nc" id="L59">            System.out.println();</span>
         }
-<span class="nc" id="L36">    }</span>
+<span class="nc" id="L61">    }</span>
 
     public void inditas() {
-<span class="nc" id="L39">        Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L64">        Scanner scanner = new Scanner(System.in);</span>
 
-<span class="nc bnc" id="L41" title="All 2 branches missed.">        while (!felad) {</span>
-<span class="nc" id="L42">            palyaKiiratas();</span>
-<span class="nc" id="L43">            System.out.println(&quot;Hős iránya: &quot; + irany);</span>
-<span class="nc" id="L44">            System.out.println(&quot;Nyilaid száma: &quot; + nyilakSzama);</span>
-<span class="nc" id="L45">            System.out.println(&quot;Melyik irányba szeretnél menni? (balra, jobbra, mozgas, fel, le, felad, lő):&quot;);</span>
-<span class="nc" id="L46">            String parancs = scanner.nextLine();</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        while (!felad) {</span>
+<span class="nc" id="L67">            palyaKiiratas();</span>
+<span class="nc" id="L68">            System.out.println(&quot;Hős iránya: &quot; + irany);</span>
+<span class="nc" id="L69">            System.out.println(&quot;Nyilaid száma: &quot; + nyilakSzama);</span>
+<span class="nc" id="L70">            System.out.println(&quot;Melyik irányba szeretnél menni? (balra, jobbra, mozgas, fel, le, felad, lő):&quot;);</span>
+<span class="nc" id="L71">            String parancs = scanner.nextLine();</span>
 
-<span class="nc bnc" id="L48" title="All 2 branches missed.">            if (parancs.equals(&quot;felad&quot;)) {</span>
-<span class="nc" id="L49">                System.out.println(&quot;Feladtad a játékot. Összesen &quot; + lepesMennyiseg + &quot; lépést tettél meg.&quot;);</span>
-<span class="nc" id="L50">                felad = true;</span>
-<span class="nc" id="L51">                continue;</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">            if (parancs.equals(&quot;felad&quot;)) {</span>
+<span class="nc" id="L74">                System.out.println(&quot;Feladtad a játékot. Összesen &quot; + lepesMennyiseg + &quot; lépést tettél meg.&quot;);</span>
+<span class="nc" id="L75">                felad = true;</span>
+<span class="nc" id="L76">                continue;</span>
             }
 
-<span class="nc bnc" id="L54" title="All 2 branches missed.">            if (parancs.equals(&quot;mozgas&quot;)) {</span>
-<span class="nc" id="L55">                int ujX = hosX;</span>
-<span class="nc" id="L56">                int ujY = hosY;</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">            if (parancs.equals(&quot;mozgas&quot;)) {</span>
+<span class="nc" id="L80">                int ujX = hosX;</span>
+<span class="nc" id="L81">                int ujY = hosY;</span>
 
-<span class="nc bnc" id="L58" title="All 5 branches missed.">                switch (irany) {</span>
-<span class="nc" id="L59">                    case &quot;balra&quot; -&gt; ujX--;</span>
-<span class="nc" id="L60">                    case &quot;jobbra&quot; -&gt; ujX++;</span>
-<span class="nc" id="L61">                    case &quot;fel&quot; -&gt; ujY--;</span>
-<span class="nc" id="L62">                    case &quot;le&quot; -&gt; ujY++;</span>
-                    default -&gt; {
-<span class="nc" id="L64">                        System.out.println(&quot;Nem érvényes irány.&quot;);</span>
-<span class="nc" id="L65">                        continue;</span>
+<span class="nc bnc" id="L83" title="All 5 branches missed.">                switch (irany) {</span>
+                    case &quot;balra&quot;:
+<span class="nc" id="L85">                        ujX--;</span>
+<span class="nc" id="L86">                        break;</span>
+                    case &quot;jobbra&quot;:
+<span class="nc" id="L88">                        ujX++;</span>
+<span class="nc" id="L89">                        break;</span>
+                    case &quot;fel&quot;:
+<span class="nc" id="L91">                        ujY--;</span>
+<span class="nc" id="L92">                        break;</span>
+                    case &quot;le&quot; :
+<span class="nc" id="L94">                        ujY++;</span>
+<span class="nc" id="L95">                        break;</span>
+                    default: {
+<span class="nc" id="L97">                        System.out.println(&quot;Nem érvényes irány.&quot;);</span>
+<span class="nc" id="L98">                        continue;</span>
                     }
                 }
 
-<span class="nc bnc" id="L69" title="All 10 branches missed.">                if (ujX &lt; 0 || ujX &gt;= Palya.N || ujY &lt; 0 || ujY &gt;= Palya.N || palya[ujY][ujX] == 'F') {</span>
-<span class="nc" id="L70">                    System.out.println(&quot;Falba ütköztél. Válassz másik irányt.&quot;);</span>
-<span class="nc" id="L71">                    continue;</span>
+<span class="nc bnc" id="L102" title="All 10 branches missed.">                if (ujX &lt; 0 || ujX &gt;= Palya.N || ujY &lt; 0 || ujY &gt;= Palya.N || palya[ujY][ujX] == 'F') {</span>
+<span class="nc" id="L103">                    System.out.println(&quot;Falba ütköztél. Válassz másik irányt.&quot;);</span>
+<span class="nc" id="L104">                    continue;</span>
                 }
 
-<span class="nc bnc" id="L74" title="All 2 branches missed.">                if (palya[ujY][ujX] == 'W') {</span>
-<span class="nc" id="L75">                    System.out.println(&quot;Meghaltál, mert rá léptél egy Wumpuszra.&quot;);</span>
-<span class="nc" id="L76">                    felad = true;</span>
-<span class="nc" id="L77">                    returnToMainMenu();</span>
-<span class="nc" id="L78">                    continue;</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">                if (palya[ujY][ujX] == 'W') {</span>
+<span class="nc" id="L108">                    System.out.println(&quot;Meghaltál, mert rá léptél egy Wumpuszra.&quot;);</span>
+<span class="nc" id="L109">                    felad = true;</span>
+<span class="nc" id="L110">                    returnToMainMenu();</span>
+<span class="nc" id="L111">                    continue;</span>
                 }
 
-<span class="nc bnc" id="L81" title="All 2 branches missed.">                if (palya[ujY][ujX] == 'V') {</span>
-<span class="nc bnc" id="L82" title="All 2 branches missed.">                    if (nyilakSzama &gt; 0) {</span>
-<span class="nc" id="L83">                        System.out.println(&quot;A nyílak számát csökkentették, mert beleléptél a verembe.&quot;);</span>
-<span class="nc" id="L84">                        nyilakSzama--;</span>
-<span class="nc" id="L85">                        palya[hosY][hosX] = ' '; // Verem eltűnése</span>
-<span class="nc" id="L86">                        palya[ujY][ujX] = 'H'; // Hős megjelenése a verem helyén</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">                if (palya[ujY][ujX] == 'V') {</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">                    if (nyilakSzama &gt; 0) {</span>
+<span class="nc" id="L116">                        System.out.println(&quot;A nyílak számát csökkentették, mert beleléptél a verembe.&quot;);</span>
+<span class="nc" id="L117">                        nyilakSzama--;</span>
+<span class="nc" id="L118">                        palya[hosY][hosX] = ' '; // Verem eltűnése</span>
+<span class="nc" id="L119">                        palya[ujY][ujX] = 'H'; // Hős megjelenése a verem helyén</span>
                     } else {
-<span class="nc" id="L88">                        System.out.println(&quot;Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!&quot;);</span>
-<span class="nc" id="L89">                        felad = true;</span>
-<span class="nc" id="L90">                        returnToMainMenu();</span>
+<span class="nc" id="L121">                        System.out.println(&quot;Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!&quot;);</span>
+<span class="nc" id="L122">                        felad = true;</span>
+<span class="nc" id="L123">                        returnToMainMenu();</span>
                     }
-<span class="nc" id="L92">                    continue;</span>
+<span class="nc" id="L125">                    continue;</span>
                 }
 
                 // Mozgás végrehajtása
-<span class="nc" id="L96">                palya[ujY][ujX] = 'H';</span>
-<span class="nc" id="L97">                palya[hosY][hosX] = ' ';</span>
-<span class="nc" id="L98">                hosX = ujX;</span>
-<span class="nc" id="L99">                hosY = ujY;</span>
-<span class="nc" id="L100">                lepesMennyiseg++;</span>
+<span class="nc" id="L129">                palya[ujY][ujX] = 'H';</span>
+<span class="nc" id="L130">                palya[hosY][hosX] = ' ';</span>
+<span class="nc" id="L131">                hosX = ujX;</span>
+<span class="nc" id="L132">                hosY = ujY;</span>
+<span class="nc" id="L133">                lepesMennyiseg++;</span>
 
-<span class="nc" id="L102">                checkGameEnd();</span>
-<span class="nc" id="L103">                continue;</span>
+<span class="nc" id="L135">                checkGameEnd();</span>
+<span class="nc" id="L136">                continue;</span>
             }
 
-<span class="nc bnc" id="L106" title="All 2 branches missed.">            if (parancs.equals(&quot;lő&quot;)) {</span>
-<span class="nc" id="L107">                lo();</span>
-<span class="nc" id="L108">                continue;</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">            if (parancs.equals(&quot;lő&quot;)) {</span>
+<span class="nc" id="L140">                lo();</span>
+<span class="nc" id="L141">                continue;</span>
             }
 
-<span class="nc bnc" id="L111" title="All 8 branches missed.">            if (parancs.equals(&quot;balra&quot;) || parancs.equals(&quot;jobbra&quot;) || parancs.equals(&quot;fel&quot;) || parancs.equals(&quot;le&quot;)) {</span>
-<span class="nc" id="L112">                irany = parancs;</span>
-<span class="nc" id="L113">                System.out.println(&quot;Most a hős &quot; + irany + &quot; irányba néz.&quot;);</span>
+<span class="nc bnc" id="L144" title="All 8 branches missed.">            if (parancs.equals(&quot;balra&quot;) || parancs.equals(&quot;jobbra&quot;) || parancs.equals(&quot;fel&quot;) || parancs.equals(&quot;le&quot;)) {</span>
+<span class="nc" id="L145">                irany = parancs;</span>
+<span class="nc" id="L146">                System.out.println(&quot;Most a hős &quot; + irany + &quot; irányba néz.&quot;);</span>
             } else {
-<span class="nc" id="L115">                System.out.println(&quot;Nem érvényes irány vagy parancs. Kérlek válassz a lehetőségek közül.&quot;);</span>
+<span class="nc" id="L148">                System.out.println(&quot;Nem érvényes irány vagy parancs. Kérlek válassz a lehetőségek közül.&quot;);</span>
             }
-<span class="nc" id="L117">        }</span>
-<span class="nc" id="L118">    }</span>
+<span class="nc" id="L150">        }</span>
+<span class="nc" id="L151">    }</span>
 
 
     public void lo() {
-<span class="nc bnc" id="L122" title="All 2 branches missed.">        if (nyilakSzama &gt; 0) {</span>
-<span class="nc" id="L123">            int x = hosX;</span>
-<span class="nc" id="L124">            int y = hosY;</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">        if (nyilakSzama &gt; 0) {</span>
+<span class="nc" id="L156">            int x = hosX;</span>
+<span class="nc" id="L157">            int y = hosY;</span>
             while (true) {
-<span class="nc bnc" id="L126" title="All 5 branches missed.">                switch (irany) {</span>
-<span class="nc" id="L127">                    case &quot;egyenes&quot;, &quot;jobbra&quot; -&gt; x++;</span>
-<span class="nc" id="L128">                    case &quot;balra&quot; -&gt; x--;</span>
-<span class="nc" id="L129">                    case &quot;fel&quot; -&gt; y--;</span>
-<span class="nc" id="L130">                    case &quot;le&quot; -&gt; y++;</span>
+<span class="nc bnc" id="L159" title="All 5 branches missed.">                switch (irany) {</span>
+                    case &quot;egyenes&quot;:
+                    case &quot;jobbra&quot;:
+<span class="nc" id="L162">                        x++;</span>
+<span class="nc" id="L163">                        break;</span>
+                    case &quot;balra&quot;:
+<span class="nc" id="L165">                        x--;</span>
+<span class="nc" id="L166">                        break;</span>
+                    case &quot;fel&quot;:
+<span class="nc" id="L168">                        y--;</span>
+<span class="nc" id="L169">                        break;</span>
+                    case &quot;le&quot;:
+<span class="nc" id="L171">                        y++;</span>
+                        break;
                 }
 
-<span class="nc bnc" id="L133" title="All 8 branches missed.">                if (x &lt; 0 || x &gt;= Palya.N || y &lt; 0 || y &gt;= Palya.N) {</span>
-<span class="nc" id="L134">                    System.out.println(&quot;A nyíl a pálya szélét találta el.&quot;);</span>
-<span class="nc" id="L135">                    nyilakSzama--;</span>
-<span class="nc" id="L136">                    break;</span>
+<span class="nc bnc" id="L175" title="All 8 branches missed.">                if (x &lt; 0 || x &gt;= Palya.N || y &lt; 0 || y &gt;= Palya.N) {</span>
+<span class="nc" id="L176">                    System.out.println(&quot;A nyíl a pálya szélét találta el.&quot;);</span>
+<span class="nc" id="L177">                    nyilakSzama--;</span>
+<span class="nc" id="L178">                    break;</span>
                 }
 
-<span class="nc bnc" id="L139" title="All 2 branches missed.">                if (palya[y][x] == 'F') {</span>
-<span class="nc" id="L140">                    System.out.println(&quot;A nyíl eltalálta a falat.&quot;);</span>
-<span class="nc" id="L141">                    nyilakSzama--;</span>
-<span class="nc" id="L142">                    break;</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">                if (palya[y][x] == 'F') {</span>
+<span class="nc" id="L182">                    System.out.println(&quot;A nyíl eltalálta a falat.&quot;);</span>
+<span class="nc" id="L183">                    nyilakSzama--;</span>
+<span class="nc" id="L184">                    break;</span>
                 }
 
-<span class="nc bnc" id="L145" title="All 2 branches missed.">                if (palya[y][x] == 'W') {</span>
-<span class="nc" id="L146">                    System.out.println(&quot;A nyíl eltalálta a Wumpuszt!&quot;);</span>
-<span class="nc" id="L147">                    palya[y][x] = ' ';</span>
-<span class="nc" id="L148">                    nyilakSzama--;</span>
-<span class="nc" id="L149">                    checkGameEnd();</span>
-<span class="nc" id="L150">                    break;</span>
+<span class="nc bnc" id="L187" title="All 2 branches missed.">                if (palya[y][x] == 'W') {</span>
+<span class="nc" id="L188">                    System.out.println(&quot;A nyíl eltalálta a Wumpuszt!&quot;);</span>
+<span class="nc" id="L189">                    palya[y][x] = ' ';</span>
+<span class="nc" id="L190">                    nyilakSzama--;</span>
+<span class="nc" id="L191">                    checkGameEnd();</span>
+<span class="nc" id="L192">                    break;</span>
                 }
             }
-<span class="nc" id="L153">        } else {</span>
-<span class="nc" id="L154">            System.out.println(&quot;Elfogyott a nyíl.&quot;);</span>
+<span class="nc" id="L195">        } else {</span>
+<span class="nc" id="L196">            System.out.println(&quot;Elfogyott a nyíl.&quot;);</span>
         }
-<span class="nc" id="L156">    }</span>
+<span class="nc" id="L198">    }</span>
 
     public void checkGameEnd() {
-<span class="nc bnc" id="L159" title="All 2 branches missed.">        if (palya[hosY][hosX] == 'W') {</span>
-<span class="nc" id="L160">            System.out.println(&quot;Meghaltál, mert rá léptél egy Wumpuszra.&quot;);</span>
-<span class="nc" id="L161">            felad = true;</span>
-<span class="nc" id="L162">            returnToMainMenu();</span>
-<span class="nc bnc" id="L163" title="All 2 branches missed.">        } else if (palya[hosY][hosX] == 'V') {</span>
-<span class="nc bnc" id="L164" title="All 2 branches missed.">            if (nyilakSzama &gt; 0) {</span>
-<span class="nc" id="L165">                System.out.println(&quot;A nyílak számát csökkentették, mert beleléptél a verembe.&quot;);</span>
-<span class="nc" id="L166">                nyilakSzama--;</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">        if (palya[hosY][hosX] == 'W') {</span>
+<span class="nc" id="L202">            System.out.println(&quot;Meghaltál, mert rá léptél egy Wumpuszra.&quot;);</span>
+<span class="nc" id="L203">            felad = true;</span>
+<span class="nc" id="L204">            returnToMainMenu();</span>
+<span class="nc bnc" id="L205" title="All 2 branches missed.">        } else if (palya[hosY][hosX] == 'V') {</span>
+<span class="nc bnc" id="L206" title="All 2 branches missed.">            if (nyilakSzama &gt; 0) {</span>
+<span class="nc" id="L207">                System.out.println(&quot;A nyílak számát csökkentették, mert beleléptél a verembe.&quot;);</span>
+<span class="nc" id="L208">                nyilakSzama--;</span>
             } else {
-<span class="nc" id="L168">                System.out.println(&quot;Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!&quot;);</span>
-<span class="nc" id="L169">                felad = true;</span>
-<span class="nc" id="L170">                returnToMainMenu();</span>
+<span class="nc" id="L210">                System.out.println(&quot;Nincs több nyíl, amiből le lehet vonni, mert beleléptél a verembe!&quot;);</span>
+<span class="nc" id="L211">                felad = true;</span>
+<span class="nc" id="L212">                returnToMainMenu();</span>
             }
-<span class="nc bnc" id="L172" title="All 2 branches missed.">        } else if (palya[hosY][hosX] == 'A') {</span>
-<span class="nc" id="L173">            System.out.println(&quot;Gratulálunk, megszerezted az aranyat!&quot;);</span>
-<span class="nc" id="L174">            felad = true;</span>
-<span class="nc" id="L175">            returnToMainMenu();</span>
+<span class="nc bnc" id="L214" title="All 2 branches missed.">        } else if (palya[hosY][hosX] == 'A') {</span>
+<span class="nc" id="L215">            System.out.println(&quot;Gratulálunk, megszerezted az aranyat!&quot;);</span>
+<span class="nc" id="L216">            felad = true;</span>
+<span class="nc" id="L217">            returnToMainMenu();</span>
         }
-<span class="nc" id="L177">    }</span>
+<span class="nc" id="L219">    }</span>
 
     public void returnToMainMenu() {
-<span class="nc" id="L180">        AlapMenu.alapMenu();</span>
-<span class="nc" id="L181">    }</span>
+<span class="nc" id="L222">        AlapMenu.alapMenu();</span>
+<span class="nc" id="L223">    }</span>
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

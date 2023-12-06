@@ -1,7 +1,7 @@
 package Tesztek;
 
-import Wumpusz.Hozzaadas.hosHozzaad;
-import Wumpusz.Szerkesztes.Palya;
+import wumpusz.Hozzaadas.HosHozzaad;
+import wumpusz.Szerkesztes.Palya;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +23,7 @@ public class HosHozzaadTest {
         String input = "c3\n"; // Példa bemenet
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        hosHozzaad.hosHozzadas();
+        HosHozzaad.hosHozzadas();
         assertEquals('H', Palya.palya[3][3]);
     }
 
@@ -32,7 +32,7 @@ public class HosHozzaadTest {
         String input = "invalid\n";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
-        hosHozzaad.hosHozzadas();
+        HosHozzaad.hosHozzadas();
         assertEquals(' ', Palya.palya[3][3]);
     }
 

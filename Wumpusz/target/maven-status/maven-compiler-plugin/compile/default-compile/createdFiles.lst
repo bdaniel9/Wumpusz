@@ -6,5 +6,7 @@ Wumpusz\Szerkesztes\Palyaszerkeszto.class
 Wumpusz\Hozzaadas\wumpuszHozzaad.class
 Wumpusz\Szerkesztes\Palya.class
 Wumpusz\Jatek\Jatek.class
+Wumpusz\Adatbazis\JDBC.class
+Wumpusz\Adatbazis\Player.class
 Wumpusz\Alapmenu\AlapMenu.class
 Wumpusz\Hozzaadas\FalHozzaad.class

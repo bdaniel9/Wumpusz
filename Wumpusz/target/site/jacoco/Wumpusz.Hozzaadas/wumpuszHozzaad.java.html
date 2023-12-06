@@ -13,7 +13,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
         public static void wumpuszHozzaad() {
 
 <span class="nc" id="L15">            Scanner scanner = new Scanner(System.in);</span>
-<span class="nc" id="L16">            System.out.print(&quot;Add meg a WUMPUSZ kezdő pozícióját (pl. 'c3'): &quot;);</span>
+<span class="nc" id="L16">            System.out.print(&quot;Add meg a WUMPUSZ kezdő pozíciójátegyben (1. abc betui 2. egész szám): &quot;);</span>
 <span class="nc" id="L17">            String position = scanner.nextLine().toUpperCase();</span>
 <span class="nc bnc" id="L18" title="All 6 branches missed.">            if (position.length() != 2 || !Character.isLetter(position.charAt(0)) || !Character.isDigit(position.charAt(1))) {</span>
 <span class="nc" id="L19">                System.out.println(&quot;Érvénytelen pozíció formátum. Használj pl. 'a1' formátumot.&quot;);</span>
@@ -33,7 +33,7 @@ import static Wumpusz.Szerkesztes.Palya.palya;
 <span class="nc" id="L33">                wumpuszSzamlalo--;</span>
 <span class="nc" id="L34">                System.out.println(&quot;Wumpusz hozzáadva&quot;);</span>
             } else {
-<span class="nc" id="L36">                System.out.println(&quot;A megadott pozíció már foglalt, vagy nem helyezhető oda wumpusz&quot;);</span>
+<span class="nc" id="L36">                System.out.println(&quot;A megadott pozíció már foglalt, vagy nem helyezhető oda wumpusz.Válassz másik pozíciót&quot;);</span>
             }
 <span class="nc" id="L38">        }</span>
 }
